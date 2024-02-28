@@ -13,8 +13,6 @@ sayHello();
 
 //first let's listen for a key-up event
 
-window.addEventListener('keydown', playSound);
-
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   //shift option, down arrow copies the line you're on
@@ -35,3 +33,5 @@ function removeTransition(e) {
 
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+window.addEventListener('keydown', playSound);
